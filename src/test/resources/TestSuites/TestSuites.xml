@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SuiteMercadoLibre">
+
+    <test name="TC001_IngresoOfertas">
+        <parameter name="platform" value="desktop"/>
+        <classes>
+            <class name="com.mercadolibre.test.pruebas.TC01_IngresoOfertasTest"/>
+        </classes>
+    </test>
+    <test name="TC002_AssertMenuOfertas">
+        <parameter name="platform" value="desktop"/>
+        <classes>
+            <class name="com.mercadolibre.test.pruebas.TC02_AsserMenuOfertasTest"/>
+        </classes>
+    </test>
+       <test name="TC003_IngresoOfertasRelapmpago">
+        <parameter name="platform" value="desktop"/>
+        <classes>
+            <class name="com.mercadolibre.test.pruebas.TC03_IngresoOfertasRelampagoTest"/>
+        </classes>
+    </test>
+    <test name="TC004_AssertBarraProgreso">
+        <parameter name="platform" value="desktop"/>
+        <classes>
+            <class name="com.mercadolibre.test.pruebas.TC04_AssertBarraProgresoTest"/>
+        </classes>
+    </test>
+</suite>

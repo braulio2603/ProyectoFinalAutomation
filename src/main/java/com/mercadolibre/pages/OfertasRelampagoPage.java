@@ -5,17 +5,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import utils.WaitsHelpers;
 
 import java.time.Duration;
 
 public class OfertasRelampagoPage {
     private WebDriver driver; //Inicializaciòn del atributo del WebDriver
-    private WebDriverWait wait; //Inicializaciòn del atributo del WebDriverWait
+    private WaitsHelpers wait; //Inicializaciòn del atributo del WaitsHelpers
 
     public OfertasRelampagoPage(WebDriver driver){//Constructor de la pagina OfertasRelampagoPage
         this.driver = driver;
         PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait = new WaitsHelpers(driver);
     }
 
     //Uso de Page Factory para la busqueda de WebElement
@@ -24,11 +25,11 @@ public class OfertasRelampagoPage {
 
     //Metodo para hacer click en el WebElement clickOfertasRelampago
     public void validarBarraProgreso(){
-
+        wait.waitForElementByWebElement(progressBar, Duration.ofSeconds(10), Duration.ofSeconds(10));
         if (progressBar.isDisplayed()){
             System.out.println("La barra de progreso del producto se muestra correctamente");
         }else{
-            System.out.println("La barra de progreso del producto NO se muestra correctamente");
+            System.out.println("La barra de progreso del producto NO se muestra correctamente!!!");
         }
     }
 

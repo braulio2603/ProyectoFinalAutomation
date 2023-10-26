@@ -18,7 +18,7 @@ public class TC02_AsserMenuOfertasTest extends BaseTest {//Nombre de la Clase y 
 
     @Test//Anotaciòn de TestNG para marcar que el metodo es un caso de prueba y lo pueda ejecutar como tal
     public void AssertMenuOfertas(){
-        String[] menuList = {"Todas las ofertas", "Ofertas relámpago", "Nivea #Hasta45%OFF", "Electronics on fire",
+        String[] menuList = {"Todas las ofertas", "Ofertas relámpago", "Santa se adelanta", "Farmacia",
                 "Liquidación", "Envío Gratis solo meli+"};
 
         log.info("Step 1: Navigate to mercadolibre.com.mx");//Metodo que permite generar log

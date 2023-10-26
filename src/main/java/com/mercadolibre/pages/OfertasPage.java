@@ -10,11 +10,9 @@ import utils.WaitsHelpers;
 import java.time.Duration;
 
 public class OfertasPage {
-    private WebDriver driver; //Inicializaciòn del atributo del WebDriver
-    private WaitsHelpers wait; //Inicializaciòn del atributo del WaitsHelpers
+     private WaitsHelpers wait; //Inicializaciòn del atributo del WaitsHelpers
 
     public OfertasPage(WebDriver driver){ //Constructor de la pagina OfertasPage
-        this.driver = driver;
         PageFactory.initElements(driver, this);
         wait = new WaitsHelpers(driver);
     }

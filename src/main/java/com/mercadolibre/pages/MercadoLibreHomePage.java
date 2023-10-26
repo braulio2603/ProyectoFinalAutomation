@@ -11,11 +11,9 @@ import utils.WaitsHelpers;
 import java.time.Duration;
 
 public class MercadoLibreHomePage {
-    private WebDriver driver; //Inicializaciòn del atributo del WebDriver
-    private WaitsHelpers wait; //Inicializaciòn del atributo del WaitsHelpers
+      private WaitsHelpers wait; //Inicializaciòn del atributo del WaitsHelpers
 
     public MercadoLibreHomePage(WebDriver driver) { //Constructor de la pagina MercadoLibreHomePage
-        this.driver = driver;
         PageFactory.initElements(driver, this);
         wait = new WaitsHelpers(driver);
     }

@@ -9,7 +9,10 @@ import utils.Screenshot;
 @Slf4j//Libreria para poder generar logs
 public class TC01_IngresoOfertasTest extends BaseTest {//Nombre de la Clase y heredaciòn de la clase BaseTest
 
-    @Test//Anotaciòn de TestNG para marcar que el metodo es un caso de prueba y lo pueda ejecutar como tal
+    /**
+     * Anotaciòn de TestNG para marcar que el metodo es un caso de prueba y lo pueda ejecutar como tal
+     */
+    @Test
     public void ingresoOfertas(){
         log.info("Step 1: Navigate to mercadolibre.com.mx");//Metodo que permite generar log
         navigateTo("mercadolibre.com.mx");//Metodo para ingresar al sitio

@@ -23,6 +23,11 @@ public class BaseTest {
     @AfterTest
     public void afterTest(){getDriver().quit();}
 
+    /**
+     * Metodo para ingresar la URL
+     * @param _url La URL es http
+     *
+     */
     public void navigateTo(String _url){
 
         String url = String.format("http://%s", _url);

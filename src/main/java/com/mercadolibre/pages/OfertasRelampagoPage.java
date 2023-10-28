@@ -1,35 +1,35 @@
 package com.mercadolibre.pages;
 
+import com.mercadolibre.bussines.Validations;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import utils.WaitsHelpers;
+import com.mercadolibre.utils.WaitsHelpers;
 
 import java.time.Duration;
 
 public class OfertasRelampagoPage {
-    private WaitsHelpers wait; //Inicializaciòn del atributo del WaitsHelpers
 
     public OfertasRelampagoPage(WebDriver driver){//Constructor de la pagina OfertasRelampagoPage
-
         PageFactory.initElements(driver, this);
-        wait = new WaitsHelpers(driver);
     }
 
-    //Uso de Page Factory para la busqueda de WebElement
-    @FindBy(css = "#root-app > div.section_promotions_web > div.promotions_boxed-width > div > ol > li:nth-child(1) > div > a > div > div.promotion-item__description > div.promotion-item__lightning-deal-container > div.promotion-item__lightning-deal-progress-bar")
-    WebElement progressBar;
+    // WebElements
 
-    //Metodo para hacer click en el WebElement clickOfertasRelampago
-    public void validarBarraProgreso(){
-        wait.waitForElementByWebElement(progressBar, Duration.ofSeconds(10), Duration.ofSeconds(10));
-        if (progressBar.isDisplayed()){
-            System.out.println("La barra de progreso del producto se muestra correctamente");
-        }else{
-            System.out.println("La barra de progreso del producto NO se muestra correctamente!!!");
-        }
+    @FindBy(css = "#root-app > div.section_promotions_web > div.promotions_boxed-width > div > ol > li:nth-child(1) > div > a > div > div.promotion-item__description > div.promotion-item__lightning-deal-container > div.promotion-item__lightning-deal-progress-bar")
+    WebElement progressBar; //Uso de Page Factory para la busqueda de WebElement
+
+    // Methods
+
+    /**
+     * Metodo que valida si esta disponible el elemento web en la pagina.
+     *
+     * @return true Sí el elemento web esta visible en la pagina.
+     * @param driver Recibe el driver del cual se verifica si el elemento esta disponible
+     */
+    public boolean isDisplayedWebElementProgressBar(WebDriver driver){
+        return Validations.isDisplayedWebElement(progressBar, driver);
     }
 
 

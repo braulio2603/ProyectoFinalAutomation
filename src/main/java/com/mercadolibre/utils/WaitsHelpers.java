@@ -1,4 +1,4 @@
-package utils;
+package com.mercadolibre.utils;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -28,6 +28,7 @@ public class WaitsHelpers {
             }
         });
     }
+
     public WebElement waitForElementByBy(By locator /* By.id("id") */, Duration timeout /* El tiempo maximo que se va a esperar el elemento*/
             , Duration pollingInterval /* Cada que tiempo se va a revisar si el elemento se encuentra disponible*/) {
         // WebDriverWait X
@@ -42,6 +43,4 @@ public class WaitsHelpers {
             }
         });
     }
-
-
 }
